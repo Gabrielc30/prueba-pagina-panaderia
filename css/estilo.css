@@ -122,6 +122,7 @@ h2{
 p{
     font-family:sans-serif ;
     color: #33150b;
+    padding-top: 10px;
 }
 
 .text{
@@ -133,7 +134,7 @@ p{
 }
 
 #aboutus{
-    background-color: #faeed8;
+    background-color:#faeed8;
   
 }
 
@@ -143,8 +144,11 @@ p{
     max-width:310px;
     margin: 50px 0px 0px;
     border-radius: 15px;
-    box-shadow: 0px 0px 5px  black;
+    box-shadow: 0px 0px 5px  #33150b;
     
+}
+#productus{
+    background-color: #fff;
 }
 .products h3{
     font-family:'Dancing Script' ;
@@ -232,8 +236,77 @@ p{
    
 }
 
+#contact{
+    background-color: #fff;
+
+}
+#contact .container{
+  margin: auto;
+  max-width: 780px;
+    
+}
+
+#contact .card-contact{
+    background-position: center center;
+    background-size: cover;
+    padding: 30px 0px;
+    border-radius: 15px;
+    
+}
+
+.card-contact:first-child{
+   
+    margin-top: 0px;
+    background-color:#faeed8;
+}
+.card-contact:nth-child(2){
+    margin-top: 15px;
+    background-color: #faeed8;
+}
+.card-contact:nth-child(3){
+    margin-top: 15px;
+    background-color: #faeed8;
+}
+button{
+    border-radius: 15px;
+    padding: 50px;
+}
+#contact a{
+    text-decoration: none;
+}
+.card-contact:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px #33150b;
+}
+
+h4{
+    text-align: center;
+    color: #33150b;  
+    
+    font-family:sans-serif;
+    font-size: 15px;
+}
+
+
+.map-responsive{
+    padding: 30px 50px 0px 50px;
+   
+    
+}
+
+iframe{  
+    border-radius: 15px;
+}
+
+
+
+/*.card-contact{
+    padding-top: 25px;
+}*/
+
+
+
 footer .container{
- 
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -242,13 +315,6 @@ footer .container{
     
 }
 
-h4{
-    text-align: center;
-    color: #faeed8;  
-    font-weight: bold;
-    font-family:'Dancing Script';
-    font-size: 1.9em;
-}
 
 .content-foo > p{
     padding: 12px 0px;
@@ -259,21 +325,21 @@ h4{
 }
 
 .final-title h2{
-   padding: 0;
+    padding: 0;
     font-size: 1.6em;
-    color: #faeed8;
+    color: #999;
     text-align: center;
 }
 
 span{
     font-size: 20px;
     font-family: 'holtwood one sc', serif;
-    color:#fff;   
+    color:#999;   
 }
 
 
 
-@media (min-width: 700px){
+@media (min-width: 780px){
     header{
         position: fixed;
         width: 100%;
@@ -321,12 +387,34 @@ span{
         box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         margin: 0 15px;
     }
+   
+    #contact .card-container{
+       
+    }
+    .card-contact:first-child{
+        
+        
+    }
+    .content-contact:nth-child(2){
+       
+    }
+    .card-contact:nth-child(3){
+        
+    }
+    .card-contact:last-child{
+       
+    }
+
+    
+    
 
     footer .container{
         flex-direction: row;
         justify-content: space-around;
     }   
-
+    .card-contact{
+        padding: 0;
+    }
     .content-foo{
         margin: 0 20px;
     }
