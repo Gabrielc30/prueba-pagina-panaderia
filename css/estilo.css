@@ -440,7 +440,7 @@ span{
     #productus .products{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     #productus .card{
