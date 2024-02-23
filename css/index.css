@@ -5,8 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     letter-spacing: 1px;
+    max-width: 1920px;
 }
-
+.container{
+    margin: 0 auto;
+}
 /* Movimiento de pagina suave */
 html {
     scroll-behavior: smooth;
@@ -14,7 +17,7 @@ html {
 /* Ocultando scroll del body*/
 body{
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
       
 }
 
@@ -61,7 +64,7 @@ header .container{
 /*Estilo de nav*/
 nav a{
     font-size: 14px;
-    padding: 5px 0px;
+    padding: 5px 10px;
     text-decoration: none;
     color: #fff;
     font-family: 'Roboto';
@@ -72,7 +75,9 @@ nav a:hover{
     transition: .1s;
     cursor: pointer;
 }
-
+nav{
+    display: none;
+}
 /*Estilo de hero de pagina*/
 h1{
     font-family: 'Dancing Script';
@@ -166,7 +171,7 @@ p{
     flex-direction: column;
 }
 #aboutus img{
-    max-width:310px;
+    max-width:350px;
     margin: 50px 0px 0px;
     border-radius: 15px;
     box-shadow: 0px 0px 5px  #33150b;
@@ -197,9 +202,9 @@ p{
 #productus .card{
     background-position: center center;
     background-size: cover;
-    padding: 85px 0px;
+    padding: 95px 0px;
     border-radius: 15px;
-    max-width: 310px;
+    max-width: 350px;
     margin: 15px auto ;
 
 }
@@ -417,10 +422,8 @@ span{
 
 /*Aplicando responsive design para escritorio*/
 
-@media (min-width: 900px){
-    body{
-        
-    }
+@media (min-width: 1080px){
+   
     header{
         position: fixed;
         height: 50px;
@@ -438,6 +441,9 @@ span{
     
     nav a{
         margin-right: 20px;
+    }
+    nav{
+        display: inline;
     }
     .linknavc{
         margin-right: 40px;
@@ -467,7 +473,8 @@ span{
     }
 
     #aboutus img{
-        margin: 50px 0 0 25px;
+        margin: auto;
+        margin-left: 50px;
     }
     #productus .products{
         display: flex;
@@ -476,8 +483,8 @@ span{
     }
 
     #productus .card{
-        width: 250px;
-       
+        width: 350px;
+       min-width: 230px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position-y: 0;
@@ -485,7 +492,7 @@ span{
         
         margin: 0 15px;
     }
-   
+   /*
     #contact .card-container{
        
     }
@@ -502,7 +509,7 @@ span{
     .card-contact:last-child{
        
     }
-
+*/
     
     
 
