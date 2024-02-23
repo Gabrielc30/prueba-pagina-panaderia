@@ -1,0 +1,528 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Holtwood+One+SC&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+/* Movimiento de pagina suave */
+html {
+    scroll-behavior: smooth;
+}
+/* Ocultando scroll del body*/
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+      
+}
+
+/*.logo{
+    width: 60px;
+    margin-top:5px;
+}*/
+
+
+/*img{
+    max-width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}*/
+
+header{
+    background-color: #33150b;
+    width: 100vw;
+    
+}
+/*Padding de all containers*/
+.container{
+    padding: 50px 40px;
+   
+}
+/*Comportamiento del header*/
+header .container{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Estilo de logo*/
+.container__logo{
+    padding: 6px 0;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'holtwood one sc', serif;
+    color:#fff;   
+}
+
+
+
+/*Estilo de nav*/
+nav a{
+    font-size: 14px;
+    padding: 5px 0px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto';
+}
+
+nav a:hover{
+    color: #f1c974;
+    transition: .1s;
+    cursor: pointer;
+}
+
+/*Estilo de hero de pagina*/
+h1{
+    font-family: 'Dancing Script';
+    color:#fff;
+    text-align: center;
+}
+
+
+#hero .container{
+    padding: 0;
+    font-size: 2em;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 96vh;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+        )
+        ,url("../img/medialunas.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: none;
+}
+
+
+#hero img{
+    margin-top: 50px;
+   
+    width: 300px;
+   
+}
+
+
+
+/*.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+   
+    
+}*/
+
+/*Estilo de titulos h2*/
+h2{
+    text-align: center;
+    padding-bottom: 50px;
+    font-family:'Dancing Script' ;
+    font-size: 3em;
+    color: #33150b;
+}
+
+/*Estilo de parrafos*/
+p{
+    font-family: sans-serif ;
+    color: #33150b;
+    padding-top: 20px;
+}
+
+/*Comportamiento de los textos*/
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+/*Estilos de la seccion "sobre nosotros"*/
+#aboutus{
+    background-color:#faeed8;
+}
+
+#aboutus p{
+    padding-top: 0;
+}
+
+#aboutus .container{
+    max-width: 84vw;
+    margin: auto;
+}
+#aboutus .text{
+    display: flex;
+    flex-direction: column;
+}
+#aboutus img{
+    max-width:310px;
+    margin: 50px 0px 0px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px  #33150b;
+    
+}
+
+/*Estilo de la seccion "Poductos"*/
+#productus{
+    background-color: #fff;
+}
+#productus h3{
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+#productus h2{
+    padding-bottom: 35px;
+}
+#productus .container{
+    padding-top: 50px;
+
+}
+
+/*Cards products*/
+#productus .card{
+    background-position: center center;
+    background-size: cover;
+    padding: 85px 0px;
+    border-radius: 15px;
+    max-width: 310px;
+    margin: 15px auto ;
+
+}
+
+.card:first-child{
+    margin-top: 0px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    )
+    ,url("../img/miñon.jpg");
+
+}
+
+.card:nth-child(2){
+    margin-top:15px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    )
+    ,url("../img/maicena.jpg");
+}
+
+.card:nth-child(3){
+    margin-top:15px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    )
+    ,url("../img/factura.jpg");
+
+}
+
+.card:last-child{
+    margin-top:15px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    )
+    ,url("../img/chipa.jpg");
+}
+
+/*Estilo hover de los cards products*/
+.card:hover{
+    box-shadow:0px 0px 5px #33150b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:first-child:hover{
+    margin-top: 0px;
+    background-image: url("../img/miñon.jpg");
+    
+}
+
+.card:nth-child(2):hover{
+    margin-top:15px;
+    background-image: url("../img/maicena.jpg");
+    
+}   
+
+.card:nth-child(3):hover{
+    margin-top:15px;
+    background-image: url("../img/factura.jpg");
+ 
+}
+
+.card:last-child:hover{
+    margin-top:15px;
+    background-image: url("../img/chipa.jpg");
+}
+
+/*.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(1);
+    background: hsla(13, 80%, 14%, 0.6);
+    transition: transform .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5%;
+}
+
+
+.hover-galeria p{
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.img:hover .hover-galeria{
+    
+    transform: scale(0);
+    transition: 0.2s;
+}*/
+
+
+/*Seccion "Horarios"*/
+#timetable{
+
+    background-color: #faeed8;
+   
+}
+
+#timetable b{
+    font-size: 25px;
+}
+#timetable p:first-child{
+    padding: 0;
+}
+/*Seccion "Contacto"*/
+#contact{
+    background-color: #fff;
+
+}
+
+#contact .container{
+  margin: auto;
+  max-width: 780px;
+    
+}
+
+/*Botones de contacto*/
+#contact .card-contact{
+    background-position: center center;
+    background-size: cover;
+    padding: 0px 0px;
+    border-radius: 15px;
+    
+}
+
+.card-contact:first-child{
+   
+    margin-top: 0px;
+    background-color:#faeed8;
+}
+.card-contact:nth-child(2){
+    margin-top: 15px;
+    background-color: #faeed8;
+}
+.card-contact:nth-child(3){
+    margin-top: 15px;
+    background-color: #faeed8;
+}
+
+#contact a{
+    text-decoration: none;
+}
+.card-contact:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px #33150b;
+}
+
+/*Estilo de titulos h4*/
+h4{
+    text-align: center;
+    color: #33150b;  
+    line-height: 75px;
+    font-family:sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+/*Estilo del mapa*/
+.map-responsive{
+    padding: 0px 50px 30px 50px;
+   
+    
+}
+
+iframe{  
+    border-radius: 15px;
+}
+
+/*Estilos del footer*/
+footer .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(20, 20, 20)
+    
+}
+
+
+.content-foo > p{
+    padding: 12px 0px;
+    color: #faeed8;
+    font-family:sans-serif;
+    text-align: center;
+    font-size: .9em;
+}
+
+.final-title h2{
+    padding: 0;
+    font-size: 1.6em;
+    color: #999;
+    text-align: center;
+}
+
+/*Titulo de pagina final*/
+span{
+    font-size: 20px;
+    font-family: 'holtwood one sc', serif;
+    color:#999;   
+}
+
+/*Aplicando responsive design para escritorio*/
+
+@media (min-width: 900px){
+    body{
+        
+    }
+    header{
+        position: fixed;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+       
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    nav a{
+        margin-right: 20px;
+    }
+    .linknavc{
+        margin-right: 40px;
+    }
+    .container__logo{
+        padding:0;
+        margin: 6px 12px;
+    }
+
+    #hero{
+        height: 100vh;
+        background-attachment: fixed;
+
+    }
+  
+    #hero img{
+        margin:50px 50px 0 50px;
+        width: 400px;
+    }
+
+    h1{
+        margin-left: 50px;
+    }
+
+    #aboutus .text{
+        flex-direction: row;
+    }
+
+    #aboutus img{
+        margin: 50px 0 0 25px;
+    }
+    #productus .products{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #productus .card{
+        width: 250px;
+       
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(50, 50, 50, 1);
+        
+        margin: 0 15px;
+    }
+   
+    #contact .card-container{
+       
+    }
+    .card-contact:first-child{
+        
+        
+    }
+    .content-contact:nth-child(2){
+       
+    }
+    .card-contact:nth-child(3){
+        
+    }
+    .card-contact:last-child{
+       
+    }
+
+    
+    
+
+    footer .container{
+        flex-direction: row;
+        justify-content: space-around;
+    }   
+    .card-contact{
+        padding: 0;
+    }
+    .content-foo{
+        margin: 0 20px;
+    }
+}
+/*@media(min-width:820px){
+    #aboutus .text{
+        flex-direction: row;
+    }
+    
+    #aboutus img{
+        margin: 0 0px 0 50px;
+    };
+}
