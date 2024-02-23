@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Holtwood+One+SC&family=Roboto:wght@300&display=swap');
 *{
     margin: 0;
@@ -13,10 +14,12 @@
 html {
     scroll-behavior: smooth;
 }
-
-
 /* Ocultando scroll del body*/
-
+body{
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+      
+}
 
 /*.logo{
     width: 60px;
@@ -30,23 +33,24 @@ html {
     justify-content: space-evenly;
 }*/
 
+header{
+    background-color: #33150b;
+    width: 100vw;
+    
+}
 /*Padding de all containers*/
 .container{
     padding: 50px 40px;
    
 }
 /*Comportamiento del header*/
-/* 
-
 header .container{
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-/*Estilo de logo
-
+/*Estilo de logo*/
 .container__logo{
     padding: 6px 0;
     text-align: center;
@@ -57,7 +61,7 @@ header .container{
 
 
 
-/*Estilo de nav
+/*Estilo de nav*/
 
 nav a{
     font-size: 14px;
@@ -67,49 +71,13 @@ nav a{
     font-family: 'Roboto';
 }
 
-
-
-*/
-
-header{
-    background-color: #4C1905;
-    padding: 1rem;
-    position: fixed;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.container__logo{
-    color: #fff;
-    padding: 0;
-    font-family: 'Holtwood one sc';
-    font-size: 25px;
-    padding-left: 16px;
-}
-
-.nav-list{
-    display: flex;
-    gap: 2rem;
-    padding-right: 2rem;
-}
-
-.nav-list li, a{
-    font-family:sans-serif;
-    color: #fff;
-    text-decoration: none;
-    list-style-type: none;  
-    font-family:sans-serif;
-}
-
 nav a:hover{
-    color: #FFCA6F;
+    color: #f1c974;
     transition: .1s;
     cursor: pointer;
 }
 
-.abrir-menu, .cerrar-menu{
+nav{
     display: none;
 }
 
@@ -132,7 +100,7 @@ h1{
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 100vh;
+    height: 96vh;
     background-image:linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.4),
@@ -155,7 +123,14 @@ h1{
 
 
 
-
+/*.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+   
+    
+}*/
 
 /*Estilo de titulos h2*/
 h2{
@@ -309,6 +284,33 @@ p{
     background-image: url("../img/chipa.jpg");
 }
 
+/*.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(1);
+    background: hsla(13, 80%, 14%, 0.6);
+    transition: transform .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5%;
+}
+
+
+.hover-galeria p{
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.img:hover .hover-galeria{
+    
+    transform: scale(0);
+    transition: 0.2s;
+}*/
+
 
 /*Seccion "Horarios"*/
 #timetable{
@@ -423,103 +425,36 @@ span{
 
 /*Aplicando responsive design para escritorio*/
 
-@media  screen and (max-width: 700px) {
-
-    .abrir-menu, .cerrar-menu{
-        
-        display: block;
-        border: 0;
-        background-color: transparent;
-        color:#ececec;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
-    .abrir-menu{
-        padding-right: 20px;
-    }
-
-    .abrir-menu:hover, .cerrar-menu:hover{
-        color: #FFCA6F;
-        transition: .1s;
-    }
-    .nav{
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 3.5rem;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #4C1905;
-        padding: 1rem 2rem 0 6rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-    }
-    .nav.visible{
-        
-        opacity: 1;
-        visibility: visible;    
-    }
-    .nav-list{
-        flex-direction: column;
-        align-items: end;
-        gap: 4rem;
-        padding: 0;
-    }    
-
-   
-
-    .overflow.visible{
-        overflow: hidden;
-    }
-}
-
 @media (min-width: 1080px){
-
+   
     header{
-        padding: 1.5rem;
-        background-color: #4C1905;
+        position: fixed;
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+       
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
     
+    
+    nav a{
+        margin-right: 20px;
+    }
+    nav{
+        display: inline;
+    }
+    .linknavc{
+        margin-right: 40px;
+    }
     .container__logo{
-        color: #fff;
-        padding: 0;
-        font-family: 'Holtwood one sc';
-        font-size: 25px;
-        padding-left: 8px;
+        padding:0;
+        margin: 6px 12px;
     }
-    
-    .nav-list{
-        display: flex;
-        gap: 2rem;
-    }
-    
-    .nav-list li, a{
-        font-family:sans-serif;
-        color: #fff;
-        text-decoration: none;
-        list-style-type: none;  
-        font-family: 'Roboto'; 
-    }
-    
-    nav a:hover{
-        color: #f1c974;
-        transition: .1s;
-        cursor: pointer;
-    }
-
-    .abrir-menu, .cerrar-menu{
-        display: none;
-    }
-    
-
-
 
     #hero{
         height: 100vh;
@@ -559,7 +494,27 @@ span{
         background-color: rgba(50, 50, 50, 1);
         
         margin: 0 15px;
-    } 
+    }
+   /*
+    #contact .card-container{
+       
+    }
+    .card-contact:first-child{
+        
+        
+    }
+    .content-contact:nth-child(2){
+       
+    }
+    .card-contact:nth-child(3){
+        
+    }
+    .card-contact:last-child{
+       
+    }
+*/
+    
+    
 
     footer .container{
         flex-direction: row;
@@ -571,4 +526,13 @@ span{
     .content-foo{
         margin: 0 20px;
     }
+}
+/*@media(min-width:820px){
+    #aboutus .text{
+        flex-direction: row;
+    }
+    
+    #aboutus img{
+        margin: 0 0px 0 50px;
+    };
 }
