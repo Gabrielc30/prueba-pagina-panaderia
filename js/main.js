@@ -1,4 +1,4 @@
-/*const nav = document.querySelector("#nav");
+const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
 const list = document.querySelector("#list");
@@ -35,7 +35,7 @@ list3.addEventListener("click", () => {
 list4.addEventListener("click", () => {
     nav.classList.remove("visible")
     bodi.classList.remove("visible")
-})*/
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     // Navigation menu for mobile
