@@ -450,19 +450,13 @@ body {
 /* Para escritorio */
 @media (min-width: 1025px) {
     .card-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-    }
-    
-    .card-contact:not(.address) {
-        grid-column: auto;
+        grid-template-columns: repeat(3, 1fr);
     }
     
     .card-contact.address {
-        grid-column: 1 / -1;
-        grid-row: 2;
+        grid-column: span 3;
     }
+}
 
 .card-contact {
     background-color: var(--bg-light);
