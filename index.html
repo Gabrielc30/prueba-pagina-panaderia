@@ -1,133 +1,145 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 
 <head>
+    <title>EL COLO</title>
     <meta charset="utf-8">
-    <title>El Colo | Panadería y Confitería Artesanal en [Ciudad]</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="description" content="El Colo es una panadería y confitería artesanal en [Ciudad]. Productos frescos, facturas, chipá y pastelería tradicional. Conocé nuestra historia y contactanos.">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="./img/gorro2.ico">
-    <link rel="canonical" href="https://tusitio.com">
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Holtwood+One+SC&family=Roboto:wght@300;400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./css/normalize.css">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="El Colo | Panadería Artesanal en [Ciudad]">
-    <meta property="og:description" content="Facturas, panificados, chipá y más en tu panadería de confianza.">
-    <meta property="og:image" content="https://tusitio.com/img/Logo2.png">
-    <meta property="og:url" content="https://tusitio.com">
-    <meta property="og:type" content="website">
-
-    <!-- Rich Snippet JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Bakery",
-      "name": "Panadería El Colo",
-      "image": "https://tusitio.com/img/Logo2.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "[Ciudad]",
-        "addressCountry": "AR"
-      },
-      "url": "https://tusitio.com",
-      "telephone": "+54 9 [teléfono]",
-      "openingHours": "Mo-Sa 08:00-12:30,16:30-21:30, Su 08:30-12:00,16:30-21:00"
-    }
-    </script>
-
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 
 <body class="overflow" id="bodi">
-
-    <header>
-        <p class="container__logo">EL COLO</p>
-        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
-        <nav class="nav" id="nav">
-            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
-            <ul class="nav-list">
-                <li><a href="#hero" class="linknav">Inicio</a></li>
-                <li><a href="#aboutus" class="linknav">Nosotros</a></li>
-                <li><a href="#productus" class="linknav">Productos</a></li>
-                <li><a href="#contact" class="linknavc">Contacto</a></li>
-            </ul>
-        </nav>
+    <header id="main-header">
+        <div class="header-container">
+            <p class="container__logo"><i class="bi bi-shop"></i> EL COLO</p>
+            <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+            <nav class="nav" id="nav">
+                <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+                <ul class="nav-list">
+                    <li id="list"><a href="#hero" class="linknav"><i class="bi bi-house-door"></i> Inicio</a></li>
+                    <li id="list2"><a href="#aboutus" class="linknav"><i class="bi bi-people"></i> Nosotros</a></li>
+                    <li id="list3"><a href="#productus" class="linknav"><i class="bi bi-basket"></i> Productos</a></li>
+                    <li id="list4"><a href="#contact" class="linknavc"><i class="bi bi-chat-dots"></i> Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <script src="./js/main.js"></script>
-
     <section id="hero">
-        <div class="container">
-            <h1>Panadería y Confitería Artesanal en [Ciudad]</h1>
-        </div>
-        <div class="container">
-            <img src="./img/Logo2.png" alt="Logo de Panadería El Colo">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="animated fadeIn">Panadería y Confitería Artesanal</h1>
+            <div class="logo-container animated fadeInUp">
+                <img src="./img/Logo2.png" alt="Logo El Colo">
+            </div>
+            <a href="#productus" class="cta-button animated fadeInUp">Ver Productos <i class="bi bi-arrow-down-circle"></i></a>
         </div>
     </section>
 
     <section id="aboutus">
         <div class="container">
-            <h2>Sobre nosotros: nuestra historia y pasión</h2>
+            <h2 class="section-title">Sobre nosotros</h2>
             <div class="text">
-                <p>En el <b>desafiante</b> inicio del <b>año 2021</b>, cuando el mundo se enfrentaba a la pandemia del coronavirus, <b>surgió una chispa de inspiración</b>. Nos dimos cuenta de que <b>la vida es demasiado corta para no perseguir los sueños</b>, y el nuestro siempre había sido <b>abrir una panadería</b>.
-                Este anhelo, que había estado en nuestras mentes durante años, <b>finalmente cobró vida</b>. Impulsados por la búsqueda de nuevos horizontes después de la crisis global, <b>decidimos convertir ese sueño en una realidad</b>.</p>
-                <img src="./img/nosotros.jpg" alt="Interior de la panadería El Colo">
+                <div class="about-content">
+                    <p>En el <b>desafiante</b> inicio del <b>año 2021</b>, cuando el mundo se enfrentaba a la pandemia del coronavirus, <b>surgió una chispa de inspiración</b>. Nos dimos cuenta de que <b>la vida es demasiado corta para no perseguir los sueños</b>, y el nuestro siempre había sido <b>abrir una panadería</b>.
+                    Este anhelo, que había estado en nuestras mentes durante años, <b>finalmente cobró vida</b>. Impulsados por la búsqueda de nuevos horizontes después de la crisis global, <b>decidimos convertir ese sueño en una realidad</b>.</p>
+                    <p>Nuestra panadería es más que un lugar para disfrutar de pan fresco y repostería deliciosa; es un testimonio de la creencia inquebrantable en que los sueños pueden hacerse realidad.</p>
+                </div>
+                <div class="about-image">
+                    <img src="./img/nosotros.jpg" alt="panaderia">
+                </div>
             </div>
         </div>
     </section>
 
     <section id="productus">
         <div class="container">
-            <h2>Nuestros productos artesanales</h2>
+            <h2 class="section-title">Nuestros productos</h2>
             <div class="products">
                 <div class="card">
-                    <h3>Panificados</h3>
+                    <div class="card-overlay"></div>
+                    <h3><i class="bi bi-bread"></i> Panificados</h3>
                 </div>
+                    
                 <div class="card">
-                    <h3>Pastelería</h3>
+                    <div class="card-overlay"></div>
+                    <h3><i class="bi bi-cake"></i> Pastelería</h3>
                 </div>
+                
                 <div class="card">
-                    <h3>Facturas</h3>
+                    <div class="card-overlay"></div>
+                    <h3><i class="bi bi-cookie"></i> Facturas</h3>
                 </div>
+                        
                 <div class="card">
-                    <h3>Chipa</h3>
-                </div>
+                    <div class="card-overlay"></div>
+                    <h3><i class="bi bi-egg-fried"></i> Chipa</h3>
+                </div>    
             </div>
         </div>
     </section>
 
     <section id="timetable">
         <div class="container">
-            <h2>Horarios de atención</h2>
-            <div class="text">
-                <p><b>Lunes a sábados:</b> 8:00hs a 12:30hs y 16:30hs a 21:30hs</p>
-                <p><b>Domingos:</b> 8:30hs a 12:00hs y 16:30hs a 21:00hs</p>
+            <h2 class="section-title">Horarios de atención</h2>
+            <div class="timetable-container">
+                <div class="timetable-card">
+                    <div class="timetable-icon">
+                        <i class="bi bi-clock"></i>
+                    </div>
+                    <div class="timetable-content">
+                        <p><b>Lunes a sábados</b></p>
+                        <p><i class="bi bi-sun"></i> 8:00hs a 12:30hs</p>
+                        <p><i class="bi bi-moon"></i> 16:30hs a 21:30hs</p>
+                    </div>
+                </div>
+                
+                <div class="timetable-card">
+                    <div class="timetable-icon">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <div class="timetable-content">
+                        <p><b>Domingos</b></p> 
+                        <p><i class="bi bi-sun"></i> 8:30hs a 12:00hs</p> 
+                        <p><i class="bi bi-moon"></i> 16:30hs a 21:00hs</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div>    
     </section>
 
     <section id="contact">
         <div class="container">
-            <h2>Contacto</h2>
+            <h2 class="section-title">Contacto</h2>
             <div class="card-container">
                 <div class="card-contact">
-                    <a href="https://wa.link/hjxzrh" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.link/hjxzrh" target="_blank">
+                        <i class="bi bi-whatsapp contact-icon"></i>
                         <h4>Whatsapp</h4>
                     </a>
                 </div>
                 <div class="card-contact">
-                    <a href="https://www.instagram.com/_el_colo/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/_el_colo/" target="_blank">
+                        <i class="bi bi-instagram contact-icon"></i>
                         <h4>Instagram</h4>
                     </a>
                 </div>
-                <div class="card-contact">
-                    <a href="https://maps.app.goo.gl/sAx3gWRE6SrgRqRC7" target="_blank" rel="noopener noreferrer">
+                <div class="card-contact address">
+                    <a href="https://maps.app.goo.gl/sAx3gWRE6SrgRqRC7" target="_blank">
+                        <i class="bi bi-geo-alt contact-icon"></i>
                         <h4>Dirección</h4>
                     </a>
                     <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223.03061217390606!2d-54.75587675542485!3d-26.568653748847293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f779afdbfcd567%3A0x77b780cfda0997c9!2sPanificados%20El%20Colo!5e0!3m2!1ses-419!2sar!4v1699000187305!5m2!1ses-419!2sar" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223.03061217390606!2d-54.75587675542485!3d-26.568653748847293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f779afdbfcd567%3A0x77b780cfda0997c9!2sPanificados%20El%20Colo!5e0!3m2!1ses-419!2sar!4v1699000187305!5m2!1ses-419!2sar" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
@@ -136,12 +148,23 @@
 
     <footer>
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><i class="bi bi-shop"></i> EL COLO</p>
+                    <p>Panadería y Confitería Artesanal</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://wa.link/hjxzrh" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/_el_colo/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://maps.app.goo.gl/sAx3gWRE6SrgRqRC7" target="_blank"><i class="bi bi-geo-alt"></i></a>
+                </div>
+            </div>
             <div class="final-title">
                 <h2>&copy; <span class="logo">EL COLO</span> | Designed by Gabriel</h2>
-            </div>
+            </div>        
         </div>
     </footer>
 
+    <script src="./js/main.js"></script>
 </body>
-
 </html>
