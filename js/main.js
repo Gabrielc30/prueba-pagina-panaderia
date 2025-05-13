@@ -79,7 +79,6 @@ list4.addEventListener("click", () => {
     nav.classList.remove("visible");
     bodi.classList.remove("visible");
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     // Navigation menu for mobile
     const nav = document.querySelector("#nav");
