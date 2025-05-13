@@ -119,83 +119,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Animate elements inside the section
                 const title = section.querySelector('.section-title');
-                if (title) {
-                    title.classList.add('fadeIn');
-                    title.style.animationDelay = '0.2s';
-                }
+                if (title) title.classList.add('fadeIn');
                 
                 const cards = section.querySelectorAll('.card, .card-contact, .timetable-card');
                 if (cards.length > 0) {
                     cards.forEach((card, index) => {
                         setTimeout(() => {
                             card.classList.add('fadeInUp');
-                        }, 100 * (index + 1));
-                    });
-                }
-                
-                // Animate content in About section
-                if (section.id === 'aboutus') {
-                    const aboutContent = section.querySelector('.about-content');
-                    const aboutImage = section.querySelector('.about-image');
-                    
-                    if (aboutContent) aboutContent.classList.add('fadeIn');
-                    if (aboutImage) {
-                        aboutImage.style.animationDelay = '0.3s';
-                        aboutImage.classList.add('fadeInUp');
-                    }
-                }
-            }
-        });
-    };
-    
-    // Run animation check on scroll
-    window.addEventListener('scroll', animateOnScroll);
-    
-    // Run once on initial load
-    animateOnScroll();
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Add active class to current section in navigation
-    const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        
-        document.querySelectorAll('section').forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                document.querySelectorAll('.nav-list a').forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-});
-
-
