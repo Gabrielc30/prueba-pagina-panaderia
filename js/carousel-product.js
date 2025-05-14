@@ -1,3 +1,12 @@
+// Mejoras para el carrusel de productos
+// Incluye: centrado vertical de flechas, soporte para deslizamiento táctil y optimización de imágenes
+
+// Variables de control para el carrusel
+let currentProduct = '';
+let currentImageIndex = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+
 // Estructura de datos para el carrusel de imágenes por producto
 const carouselData = {
     "panificados": [
@@ -51,10 +60,15 @@ function createCarouselModal() {
         const closeBtn = modal.querySelector('.close-carousel');
         const prevBtn = modal.querySelector('.carousel-prev');
         const nextBtn = modal.querySelector('.carousel-next');
+        const imageContainer = modal.querySelector('.carousel-image-container');
         
         closeBtn.addEventListener('click', closeModal);
         prevBtn.addEventListener('click', showPrevImage);
         nextBtn.addEventListener('click', showNextImage);
+        
+        // Añadir eventos de deslizamiento táctil
+        imageContainer.addEventListener('touchstart', handleTouchStart, false);
+        imageContainer.addEventListener('touchend', handleTouchEnd, false);
         
         // Cerrar modal al hacer clic fuera del contenido
         modal.addEventListener('click', function(e) {
@@ -68,9 +82,31 @@ function createCarouselModal() {
     }
 }
 
-// Variables para controlar el carrusel
-let currentProduct = '';
-let currentImageIndex = 0;
+// Gestionar inicio de toque táctil
+function handleTouchStart(e) {
+    touchStartX = e.changedTouches[0].screenX;
+}
+
+// Gestionar fin de toque táctil
+function handleTouchEnd(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}
+
+// Procesar deslizamiento táctil
+function handleSwipe() {
+    const minSwipeDistance = 50; // Distancia mínima para detectar un deslizamiento
+    
+    if (touchEndX < touchStartX - minSwipeDistance) {
+        // Deslizamiento hacia la izquierda -> siguiente imagen
+        showNextImage();
+    }
+    
+    if (touchEndX > touchStartX + minSwipeDistance) {
+        // Deslizamiento hacia la derecha -> imagen anterior
+        showPrevImage();
+    }
+}
 
 // Función para mostrar el modal con el carrusel
 function openModal(productType) {
@@ -98,6 +134,14 @@ function updateCarouselImage() {
     if (carouselData[currentProduct] && carouselData[currentProduct][currentImageIndex]) {
         image.src = carouselData[currentProduct][currentImageIndex];
         image.alt = `${currentProduct} ${currentImageIndex + 1}`;
+        
+        // Asegurar que la imagen carga correctamente
+        image.onload = function() {
+            image.style.opacity = 1;
+        };
+        
+        // Efecto de transición
+        image.style.opacity = 0.8;
     }
 }
 
