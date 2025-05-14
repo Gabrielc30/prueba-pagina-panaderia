@@ -1,12 +1,3 @@
-// Mejoras para el carrusel de productos
-// Incluye: centrado vertical de flechas, soporte para deslizamiento táctil y optimización de imágenes
-
-// Variables de control para el carrusel
-let currentProduct = '';
-let currentImageIndex = 0;
-let touchStartX = 0;
-let touchEndX = 0;
-
 // Estructura de datos para el carrusel de imágenes por producto
 const carouselData = {
     "panificados": [
@@ -30,6 +21,12 @@ const carouselData = {
         "./img/chipa-3.jpg"
     ]
 };
+
+// Variables para controlar el carrusel y el deslizamiento táctil
+let currentProduct = '';
+let currentImageIndex = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 
 // Crear el modal del carrusel
 function createCarouselModal() {
